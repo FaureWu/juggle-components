@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 var path = require('path');
 var autoprefixer = require('autoprefixer');
 var precss = require('precss');
@@ -91,6 +92,10 @@ module.exports = {
   context: __dirname,
   externals: Object.keys(require(paths.pkg).peerDependencies).map(function(name) { return name }),
   plugins: [
+    new StyleLintPlugin({
+      configFile: paths.stylelintConfig,
+      context: paths.src
+    }),
     new UglifyJSPlugin({
       compress: {
         screw_ie8: true, // React doesn't support IE8

@@ -13,4 +13,7 @@ module.exports = {
   styles: path.resolve(src, 'styles'),
   index: path.resolve(src, 'index.js'),
   pkg: path.resolve(basePath, 'package.json'),
+  eslintConfig: path.resolve(basePath, '.eslintrc'),
+  stylelintConfig: path.resolve(basePath, '.stylelintrc.js'),
+  babelConfig: path.resolve(basePath, '.babelrc')
 };
