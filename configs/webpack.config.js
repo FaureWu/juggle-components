@@ -1,8 +1,6 @@
-var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
-var path = require('path');
 var autoprefixer = require('autoprefixer');
 var precss = require('precss');
 var paths = require('./paths');
@@ -89,8 +87,8 @@ module.exports = {
       styles: paths.styles
     }
   },
-  context: __dirname,
-  externals: Object.keys(require(paths.pkg).peerDependencies).map(function(name) { return name }),
+  context: paths.basePath,
+  externals: Object.keys(require(paths.pkg).peerDependencies).map(function(name) { return name; }),
   plugins: [
     new StyleLintPlugin({
       configFile: paths.stylelintConfig,

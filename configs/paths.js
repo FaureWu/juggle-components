@@ -4,6 +4,7 @@ var basePath = path.resolve(__dirname, '..');
 var src = path.resolve(basePath, './src');
 
 module.exports = {
+  basePath: basePath,
   src: src,
   dist: path.resolve(basePath, 'dist'),
   configs: path.resolve(basePath, 'configs'),

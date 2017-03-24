@@ -11,7 +11,7 @@
     "example": "start-storybook -p 9999 -c configs/.storybook",
     "build-example": "build-storybook -c configs/.storybook -o ./examples"
   },
-  "author": "Faure Wu <502556093@qq.com>",
+  "author": "Faure Wu <https://github.com/FaureWu> <502556093@qq.com>",
   "components": {
     "hello": "hello"
   },
