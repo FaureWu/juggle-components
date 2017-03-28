@@ -1,10 +1,12 @@
 # LocaleProvider Component
 
-> Juggle Components default language is english, if you want to change the language, the following information is what you need
+> Juggle Components default language is english,
+> if you want to change the language,
+> the following information is what you need
 
 ## Juggle Components provide a `LocaleProvider` component to change the language
 
-`
+```JSX
 import { LocaleProvider } from 'juggle-components';
 
 class App extends React.Component {
@@ -16,7 +18,7 @@ class App extends React.Component {
     );
   }
 }
-`
+```
 
 ## List of supported languages
 
