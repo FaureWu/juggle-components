@@ -1,10 +1,32 @@
-import React, { PureComponent } from 'react';
+import React, { PropTypes, Component } from 'react';
 import stylesLoader from 'react-css-modules';
+import { getComponentLocale } from '../../libs/utils/getLocale';
 import styles from './hello.scss';
 
-class Hello extends PureComponent {
+class Hello extends Component {
+  static contextTypes = {
+    language: PropTypes.object,
+    exist: PropTypes.bool,
+  };
+
+  componentName = 'hello';
+
   render() {
-    return (<span><h1 className="hello2" styleName="hello">Hello world</h1></span>);
+    const {
+      context: {
+        language,
+        exist,
+      },
+      componentName,
+    } = this;
+
+    const componentLanguage = getComponentLocale(componentName, language, exist);
+
+    return (
+      <span>
+        <h1 styleName="hello">{componentLanguage.text}</h1>
+      </span>
+    );
   }
 }
 

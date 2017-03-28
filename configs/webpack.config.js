@@ -80,15 +80,10 @@ module.exports = {
       "node_modules",
       paths.src
     ],
-    extensions: [".js", ".jsx", ".json"],
-    alias: {
-      components: paths.components,
-      libs: paths.libs,
-      styles: paths.styles
-    }
+    extensions: [".js", ".jsx"]
   },
   context: paths.basePath,
-  externals: Object.keys(require(paths.pkg).peerDependencies).map(function(name) { return name; }),
+  externals: ['react'],
   plugins: [
     new StyleLintPlugin({
       configFile: paths.stylelintConfig,

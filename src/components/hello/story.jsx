@@ -2,5 +2,5 @@ import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import Hello from './index';
 
-storiesOf('Components', module)
+storiesOf('Juggle Components', module)
   .add('Hello', () => (<Hello />));

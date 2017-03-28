@@ -11,7 +11,7 @@ module.exports = {
   docs: path.resolve(basePath, 'docs'),
   components: path.resolve(src, 'components'),
   libs: path.resolve(src, 'libs'),
-  styles: path.resolve(src, 'styles'),
+  languages: path.resolve(src, 'languages'),
   index: path.resolve(src, 'index.js'),
   pkg: path.resolve(basePath, 'package.json'),
   eslintConfig: path.resolve(basePath, '.eslintrc'),

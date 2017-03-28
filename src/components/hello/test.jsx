@@ -1,17 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme'; // eslint-disable-line
 import Hello from './index';
+import defaultLocale, { getLanguage } from '../../languages';
+
+const defaultLanguage = getLanguage(defaultLocale).hello;
 
 describe('Hello Component Test', () => {
   it('should render hello world', () => {
     const hello = shallow(<Hello />);
 
     expect({
-      text1: hello.find('.hello').text(),
-      text2: hello.find('.hello2').text(),
+      text: hello.find('.hello').text(),
     }).toEqual({
-      text1: 'Hello world',
-      text2: 'Hello world',
+      text: defaultLanguage.text,
     });
   });
 });
