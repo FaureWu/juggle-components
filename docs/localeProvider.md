@@ -28,4 +28,5 @@ class App extends React.Component {
 ## List of supported props
 
 | props      | default value      | description                        |
+| ---------- | ------------------ | ---------------------------------- |
 | locale     | enUS               | enUS, zhCN                         |
