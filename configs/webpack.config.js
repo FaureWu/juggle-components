@@ -1,8 +1,5 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
-var autoprefixer = require('autoprefixer');
-var precss = require('precss');
 var paths = require('./paths');
 var components = require('./components');
 
@@ -33,45 +30,6 @@ module.exports = {
         include: [
           paths.src,
         ],
-      },
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: [
-            {
-              loader: "css-loader",
-              options: {
-                modules: true,
-                importLoaders: 1,
-                localIdentName: '[name]__[local]'
-              }
-            },
-            {
-              loader: "postcss-loader",
-              options: {
-                plugins: function() {
-                  return [
-                    autoprefixer({
-                      browsers: [
-                        '>1%',
-                        'last 4 versions',
-                        'Firefox ESR',
-                        'not ie < 9', // React doesn't support IE8 anyway
-                      ]
-                    }),
-                    precss
-                  ];
-                }
-              }
-            },
-            "sass-loader"
-          ]
-        })
-      },
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract(["styles-loader", "css-loader"])
       }
     ]
   },
@@ -87,7 +45,9 @@ module.exports = {
   plugins: [
     new StyleLintPlugin({
       configFile: paths.stylelintConfig,
-      context: paths.src
+      context: paths.src,
+      files: '**/*.styled.js',
+      syntax: 'scss'
     }),
     new UglifyJSPlugin({
       compress: {
@@ -101,7 +61,6 @@ module.exports = {
         comments: false,
         screw_ie8: true
       }
-    }),
-    new ExtractTextPlugin("[name].css")
+    })
   ]
 };

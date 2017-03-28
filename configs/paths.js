@@ -10,6 +10,7 @@ module.exports = {
   configs: path.resolve(basePath, 'configs'),
   docs: path.resolve(basePath, 'docs'),
   components: path.resolve(src, 'components'),
+  themes: path.resolve(src, 'themes'),
   libs: path.resolve(src, 'libs'),
   languages: path.resolve(src, 'languages'),
   index: path.resolve(src, 'index.js'),

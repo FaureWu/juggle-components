@@ -11,7 +11,7 @@ export const pkgNames = Object.keys(languages);
 export const getLanguage = (locale) => {
   const language = languages[locale];
   if (language !== undefined) {
-    return languages[locale];
+    return language;
   }
 
   throw new Error(`Unknown language package: ${locale}, please check it`);

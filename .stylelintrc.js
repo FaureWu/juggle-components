@@ -54,8 +54,10 @@ var displayAndBoxModel = []
   .concat(trbl("margin"));
 
 module.exports = {
+  processors: ["stylelint-processor-styled-components"],
   plugins: "stylelint-order",
   extends: "stylelint-config-standard",
+  syntax: "scss",
   rules: {
     "order/properties-order": [
       positioning.concat(displayAndBoxModel),

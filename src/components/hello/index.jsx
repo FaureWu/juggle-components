@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import stylesLoader from 'react-css-modules';
 import { getComponentLocale } from '../../libs/utils/getLocale';
-import styles from './hello.scss';
+import H1 from './hello.styled';
 
 class Hello extends Component {
   static contextTypes = {
@@ -22,12 +21,8 @@ class Hello extends Component {
 
     const componentLanguage = getComponentLocale(componentName, language, exist);
 
-    return (
-      <span>
-        <h1 styleName="hello">{componentLanguage.text}</h1>
-      </span>
-    );
+    return (<H1>{componentLanguage.text}</H1>);
   }
 }
 
-export default stylesLoader(Hello, styles);
+export default Hello;
