@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Juggle editor component library",
   "main": "index.js",
+  "repository": "https://github.com/FaureWu/juggle-components.git",
   "scripts": {
     "test": "jest --watch",
     "eslint": "eslint src/**/*.jsx src/**/*.js",
