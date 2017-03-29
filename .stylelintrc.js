@@ -65,6 +65,7 @@ module.exports = {
     ],
     "selector-pseudo-class-no-unknown": [true, {
       ignorePseudoClasses: ["global"]
-    }]
+    }],
+    "rule-empty-line-before": "never"
   }
 };

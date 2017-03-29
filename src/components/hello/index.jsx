@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { getComponentLocale } from '../../libs/utils/getLocale';
-import H1 from './hello.styled';
+import { H1 } from './hello.styled';
 
 class Hello extends Component {
   static contextTypes = {

@@ -11,6 +11,7 @@ module.exports = {
   docs: path.resolve(basePath, 'docs'),
   components: path.resolve(src, 'components'),
   themes: path.resolve(src, 'themes'),
+  styled: path.resolve(src, 'styled'),
   libs: path.resolve(src, 'libs'),
   languages: path.resolve(src, 'languages'),
   index: path.resolve(src, 'index.js'),
