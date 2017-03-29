@@ -1,7 +1,0 @@
-/dist
-/node_modules/
-/configs
-/docs
-/examples
-/src/**/story.jsx
-/src/**/test.jsx
