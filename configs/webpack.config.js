@@ -2,6 +2,7 @@ var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
 var paths = require('./paths');
 var components = require('./components');
+var packageJson = require(paths.pkg);
 
 components.index = paths.index;
 
@@ -11,7 +12,7 @@ module.exports = {
     path: paths.dist,
     filename: "[name].js",
     chunkFilename: "[name].js",
-    library: "juggle",
+    library: packageJson.name,
     libraryTarget: "umd"
   },
   module: {

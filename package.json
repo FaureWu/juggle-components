@@ -15,7 +15,8 @@
   "author": "Faure Wu <https://github.com/FaureWu> <502556093@qq.com>",
   "components": {
     "hello": "hello",
-    "localeProvider": "localeProvider"
+    "localeProvider": "localeProvider",
+    "themeProvider": "themeProvider"
   },
   "dependencies": {
     "classnames": "^2.2.5",
