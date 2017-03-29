@@ -12,7 +12,7 @@ import { ThemeProvider } from 'juggle-components';
 class App extends React.Component {
   render() {
     return (
-      <ThemeProvider locale="blue">
+      <ThemeProvider theme="blue">
         <Hello></Hello>
       </ThemeProvider>
     );
