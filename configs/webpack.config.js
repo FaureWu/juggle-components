@@ -1,5 +1,6 @@
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+var path = require('path');
 var paths = require('./paths');
 var components = require('./components');
 var packageJson = require(paths.pkg);
@@ -30,7 +31,42 @@ module.exports = {
         loader: "babel-loader",
         include: [
           paths.src,
+        ]
+      },
+      {
+        test: /\.css?$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1
+            }
+          },
+          "postcss-loader"
         ],
+        include: [
+          paths.src
+        ]
+      },
+      {
+        test: /\.scss?$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: "[name]__[local]"
+            }
+          },
+          "postcss-loader",
+          "sass-loader"
+        ],
+        include: [
+          paths.src,
+        ]
       }
     ]
   },
@@ -45,10 +81,9 @@ module.exports = {
   externals: ['react'],
   plugins: [
     new StyleLintPlugin({
-      configFile: paths.stylelintConfig,
+      configFile: path.resolve(paths.basePath, '.stylelintrc.js'),
       context: paths.src,
-      files: '**/*.styled.js',
-      syntax: 'scss'
+      syntax: "scss"
     }),
     new UglifyJSPlugin({
       compress: {

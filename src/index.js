@@ -1,5 +1,5 @@
-import Hello from 'components/hello';
+import Icon from 'components/icon';
 
 export default {
-  Hello,
+  Icon,
 };

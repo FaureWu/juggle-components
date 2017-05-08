@@ -54,7 +54,6 @@ var displayAndBoxModel = []
   .concat(trbl("margin"));
 
 module.exports = {
-  processors: ["stylelint-processor-styled-components"],
   plugins: "stylelint-order",
   extends: "stylelint-config-standard",
   syntax: "scss",
@@ -65,7 +64,6 @@ module.exports = {
     ],
     "selector-pseudo-class-no-unknown": [true, {
       ignorePseudoClasses: ["global"]
-    }],
-    "rule-empty-line-before": "never"
+    }]
   }
 };
