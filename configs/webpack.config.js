@@ -10,7 +10,7 @@ components.index = paths.index;
 module.exports = {
   entry: components,
   output: {
-    path: paths.dist,
+    path: paths.basePath,
     filename: "[name].js",
     chunkFilename: "[name].js",
     library: packageJson.name,

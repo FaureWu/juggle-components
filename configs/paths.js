@@ -6,7 +6,6 @@ var src = path.resolve(basePath, './src');
 module.exports = {
   basePath: basePath,
   src: src,
-  dist: path.resolve(basePath, 'dist'),
   configs: path.resolve(basePath, 'configs'),
   docs: path.resolve(basePath, 'docs'),
   components: path.resolve(src, 'components'),
