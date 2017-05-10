@@ -14,7 +14,7 @@ module.exports = {
     filename: "[name].js",
     chunkFilename: "[name].js",
     library: packageJson.name,
-    libraryTarget: "umd"
+    libraryTarget: "commonjs2"
   },
   module: {
     rules: [
