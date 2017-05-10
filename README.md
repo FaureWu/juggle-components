@@ -1,7 +1,8 @@
 # juggle-components
 Components for juggle editor, create by react
 
-# you need make you project support the sass, because juggle-components dependency sass
+# tips
+you need make you project support the sass, because juggle-components dependency sass
 
 # how to install
 ```BASH
