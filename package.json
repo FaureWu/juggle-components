@@ -1,6 +1,6 @@
 {
   "name": "juggle-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Juggle editor component library",
   "main": "index.js",
   "repository": "https://github.com/FaureWu/juggle-components.git",

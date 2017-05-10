@@ -78,7 +78,6 @@ module.exports = {
     extensions: [".js", ".jsx"]
   },
   context: paths.basePath,
-  externals: ['react'],
   plugins: [
     new StyleLintPlugin({
       configFile: path.resolve(paths.basePath, '.stylelintrc.js'),
