@@ -10,12 +10,5 @@
     browser: true,
     node: true,
     jest: true
-  },
-  settings: {
-    "import/resolver": {
-      webpack: {
-        config: './configs/webpack.config.js'
-      }
-    }
   }
 }
