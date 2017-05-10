@@ -14,7 +14,7 @@ module.exports = {
     filename: "[name].js",
     chunkFilename: "[name].js",
     library: packageJson.name,
-    libraryTarget: "commonjs2"
+    libraryTarget: "commonjs-module"
   },
   module: {
     rules: [
@@ -84,19 +84,6 @@ module.exports = {
       configFile: path.resolve(paths.basePath, '.stylelintrc.js'),
       context: paths.src,
       syntax: "scss"
-    }),
-    new UglifyJSPlugin({
-      compress: {
-        screw_ie8: true, // React doesn't support IE8
-        warnings: false
-      },
-      mangle: {
-        screw_ie8: true
-      },
-      output: {
-        comments: false,
-        screw_ie8: true
-      }
     })
   ]
 };
