@@ -1,5 +1,5 @@
 import Icon from './components/icon';
 
-export default {
+export {
   Icon,
 };
