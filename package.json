@@ -8,16 +8,19 @@
     "test": "jest --watch",
     "eslint": "eslint src/**/*.jsx src/**/*.js",
     "stylelint": "stylelint src/**/*.scss src/**/*.css",
-    "build": "babel src --out-dir ./ --copy-files --ignore story.js,test.js,test.jsx.snap",
+    "build": "webpack --config ./configs/webpack.config.js",
+    // "build": "babel src --out-dir ./ --copy-files --ignore story.js,test.js,test.jsx.snap",
     "example": "start-storybook -p 9999 -c configs/.storybook",
     "build-example": "build-storybook -c configs/.storybook -o ./examples"
   },
   "author": "Faure Wu <https://github.com/FaureWu> <502556093@qq.com>",
-  "peerDependencies": {
+  "components": {
+    "icon": "icon"
+  },
+  "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "react": "^15.5.4",
-    "uuid": "^3.0.1"
+    "react": "^15.5.4"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.35.3",
@@ -52,10 +55,9 @@
     "stylelint": "^7.9.0",
     "stylelint-config-standard": "^16.0.0",
     "stylelint-order": "^0.4.1",
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "react": "^15.5.4",
-    "uuid": "^3.0.1"
+    "stylelint-webpack-plugin": "^0.7.0",
+    "uglifyjs-webpack-plugin": "^0.3.1",
+    "webpack": "^2.3.1"
   },
   "jest": {
     "modulePaths": [
