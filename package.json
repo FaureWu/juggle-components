@@ -9,7 +9,6 @@
     "eslint": "eslint src/**/*.jsx src/**/*.js",
     "stylelint": "stylelint src/**/*.scss src/**/*.css",
     "build": "webpack --config ./configs/webpack.config.js",
-    // "build": "babel src --out-dir ./ --copy-files --ignore story.js,test.js,test.jsx.snap",
     "example": "start-storybook -p 9999 -c configs/.storybook",
     "build-example": "build-storybook -c configs/.storybook -o ./examples"
   },
