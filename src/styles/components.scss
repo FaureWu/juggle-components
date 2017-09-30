@@ -5,10 +5,20 @@
  */
 
 // icon
-$default-fill-color: $black;
+$icon-default-fill-color:                                       $default-font-color;
+
+// radio
+$radio-default-border-color:                                  $default-border-color;
+$radio-active-border-color:                                    $active-border-color;
+$radio-disable-border-color:                                  $disable-border-color;
+
+$radio-default-background-color:                          $default-background-color;
+$radio-active-background-color:                           $default-background-color;
+$radio-disable-background-color:                          $disable-background-color;
+
+$radio-active-dot-color:                                   $active-background-color;
+$radio-disable-dot-color:                                                $deep-gray;
 
 /*
  * @variables
  */
-$padding-vertical: 20px;
-$padding-horizontal: 15px;

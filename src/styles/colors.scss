@@ -1,2 +1,22 @@
-$black: #000;
-$white: #fff;
+$black:                                            #000;
+$white:                                            #fff;
+
+$deep-gray:                                        #ccc;
+$shallow-gray:                                     #eee;
+
+$deep-blue:                                     #009bf3;
+
+// font
+$default-font-color:                             $black;
+$active-font-color:                          $deep-blue;
+$disable-font-color:                      $shallow-gray;
+
+// border
+$default-border-color:                       $deep-gray;
+$active-border-color:                        $deep-blue;
+$disable-border-color:                       $deep-gray;
+
+// background
+$default-background-color:                       $white;
+$active-background-color:                    $deep-blue;
+$disable-background-color:                $shallow-gray;

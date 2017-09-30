@@ -1,0 +1,100 @@
+@import "../../styles/colors";
+@import "../../styles/components";
+
+.radio {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  cursor: pointer;
+
+  .input {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    margin: 1.5px 0;
+    cursor: pointer;
+    vertical-align: top;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: 1px solid $radio-default-border-color;
+      border-radius: 50%;
+      background: $radio-default-background-color;
+      content: '';
+      transition: 0.5s all;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      margin: 8.5px;
+      background: $radio-active-dot-color;
+      content: '';
+      transition: all 0.1s linear;
+    }
+
+    &:hover::before {
+      border-color: $radio-active-border-color;
+    }
+  }
+
+  &.disabled {
+    cursor: no-drop;
+
+    .input {
+      cursor: no-drop;
+
+      &::before {
+        border-color: $radio-disable-border-color;
+        background: $radio-disable-background-color;
+      }
+
+      &::after {
+        background: $radio-disable-dot-color;
+      }
+    }
+  }
+
+  &.checked {
+    .input {
+      &::after {
+        width: 7px;
+        height: 7px;
+        margin: 5px;
+      }
+    }
+
+    &:not(.disabled) {
+      cursor: default;
+
+      .input {
+        cursor: default;
+
+        &::before {
+          border-color: $radio-active-border-color;
+          background: $radio-active-background-color;
+        }
+
+        &::after {
+          background: $radio-active-dot-color;
+        }
+      }
+    }
+  }
+
+  .label {
+    margin: 0 5px;
+    vertical-align: top;
+  }
+}

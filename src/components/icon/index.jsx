@@ -15,12 +15,16 @@ class Icon extends PureComponent {
   };
 
   render() {
-    const { type, className } = this.props;
+    const { type, className, ...rest } = this.props;
 
     const ds = icons[type] instanceof Array ?
                     icons[type] : [icons[type]];
     return (
-      <svg className={classNames(styles.icon, className)} viewBox="0 0 1024 1024">
+      <svg
+        {...rest}
+        className={classNames(styles.icon, className)}
+        viewBox="0 0 1024 1024"
+      >
         {ds.map(d => (
           <path key={d} d={d} />
         ))}
