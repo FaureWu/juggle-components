@@ -14,10 +14,12 @@
   },
   "author": "Faure Wu <https://github.com/FaureWu> <502556093@qq.com>",
   "components": {
-    "icon": "icon"
+    "svgIcon": "svgIcon",
+    "radio": "radio"
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "normalize.css": "^7.0.0",
     "prop-types": "^15.5.8",
     "react": "^15.5.4"
   },

@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
 import { storiesOf } from '@kadira/storybook';
-import Icon from './index';
-import icons from './icons.json';
 
-const iconTypes = Object.keys(icons);
+import Svg from './svg';
+import path from './path.json';
+
+const iconTypes = Object.keys(path);
 
 class IconStory extends PureComponent {
   state = {
@@ -27,7 +28,7 @@ class IconStory extends PureComponent {
         </select>
         <p>You select: {type}</p>
         <div style={{ width: '200px', height: '200px' }}>
-          <Icon type={type} />
+          <Svg type={type} />
         </div>
       </div>
     );
@@ -35,4 +36,4 @@ class IconStory extends PureComponent {
 }
 
 storiesOf('Juggle Components', module)
-  .add('Icon', () => <IconStory />);
+  .add('Svg', () => <IconStory />);

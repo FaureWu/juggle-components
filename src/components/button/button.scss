@@ -1,0 +1,87 @@
+@mixin btn-primary-styles($font-color, $base-color) {
+  color: $font-color;
+  background: $base-color;
+  border-color: $base-color;
+
+  $darken-color: darken($base-color, 20%);
+  $lighten-color: lighten($base-color, 10%);
+
+  &:focus:not(:active),
+  &:hover {
+    color: $font-color;
+    background: $lighten-color;
+    border-color: $lighten-color;
+  }
+
+  &:active {
+    color: $font-color;
+    background: $darken-color;
+    border-color: $darken-color;
+  }
+}
+
+@mixin btn-default-styles($primary-color) {
+  $darken-color: darken($primary-color, 20%);
+
+  &:focus:not(:active),
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  &:active {
+    color: $darken-color;
+    border-color: $darken-color;
+  }
+}
+
+@mixin btn-dashed-styles($primary-color) {
+  border-style: dashed;
+
+  @include btn-default-styles($primary-color);
+}
+
+@mixin btn-danger-styles($font-color, $base-color) {
+  @include btn-primary-styles($font-color, $base-color);
+}
+
+@mixin btn-size($base-size) {
+  padding: 0px $base-size / 2;
+  line-height: $base-size;
+}
+
+.button {
+  position: relative;
+  border: 1px solid #959fa9;
+  color: #959fa9;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.25s all;
+  font-size: 14px;
+  background: white;
+
+  @include btn-size(32px);
+
+  @include btn-default-styles(#59c2e6);
+
+  &.primary {
+    @include btn-primary-styles(white, #59c2e6);
+  }
+
+  &.dashed {
+    @include btn-dashed-styles(#59c2e6);
+  }
+
+  &.danger {
+    @include btn-danger-styles(white, #f43f54);
+  }
+
+  &.large {
+    @include btn-size(40px);
+  }
+
+  &.small {
+    @include btn-size(24px);
+  }
+}

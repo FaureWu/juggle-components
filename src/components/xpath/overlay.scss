@@ -1,0 +1,13 @@
+@import "../../styles/colors";
+@import "../../styles/components";
+
+.overlay {
+  position: absolute;
+  background: rgba($primary-color, 0.2);
+  z-index: $max-z-index;
+  pointer-events: none;
+  transition: all 0.2;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 3px dashed $primary-color;
+}

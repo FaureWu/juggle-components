@@ -1,0 +1,13 @@
+@import "../../styles/components";
+
+.svg {
+  display: inline-block;
+  vertical-align: baseline;
+  text-align: center;
+  height: 16px;
+  width: 16px;
+
+  > path {
+    fill: $icon-default-fill-color;
+  }
+}
